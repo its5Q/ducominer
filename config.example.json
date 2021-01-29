@@ -1,0 +1,7 @@
+{
+	"username": "your-username-here",
+	"ip_url": "https://raw.githubusercontent.com/revoxhere/duino-coin/gh-pages/serverip.txt",
+	"difficulty": "NORMAL", // Possible values are: AVR, ESP, MEDIUM, NORMAL
+	"miner_name": "your-custom-miner-name-here",
+	"thread_count": 16
+}
