@@ -16,4 +16,4 @@ The usage is pretty simple. The miner can be started like that:
 where ```<config file>``` is a path to the config file. If you downloaded a precompiled version, there will be file named config.example.json that you can edit. If you installed the miner using nimble, you need to download an example config file from the repository.
 
 ### Credits
-Thanks to @revox for creating DuinoCoin that is open-source and open for anyone to contribute.
+Thanks to [@revoxhere](https://github.com/revoxhere) for creating DuinoCoin that is open-source and open for anyone to contribute.
