@@ -21,19 +21,12 @@ proc mine(username: string, pool_ip: string, pool_port: Port, difficulty: string
 
     var job: seq[string] 
     var feedback: string
-    var sharecount: int = 0
 
     while true: # An infinite loop of requesting and solving jobs
         if difficulty == "NORMAL":  # Checking if the difficulty is set to "NORMAL" and sending a job request to the server
-            if sharecount mod 200 != 0: 
-                soc.send(fmt"JOB,{username}")
-            else:
-                soc.send(fmt"JOB,5Q")   # 0.5% donation to the developer =)
+            soc.send(fmt"JOB,{username}")
         else:
-            if sharecount mod 200 != 0: 
-                soc.send(fmt"JOB,{username},{difficulty}")
-            else:
-                soc.send(fmt"JOB,5Q,{difficulty}")  # 0.5% donation to the developer =)
+            soc.send(fmt"JOB,{username},{difficulty}")
         job = soc.recvAll().split(",")  # Receiving a job from the server that is comma-separated
         for result in 0..100 * parseInt(job[2]):    # A loop for solving the job
             if $count[RHASH_SHA1](job[0] & $(result)) == job[1]:    # Checking if the hashes of the job matches our hash
@@ -43,7 +36,6 @@ proc mine(username: string, pool_ip: string, pool_port: Port, difficulty: string
                     echo fmt"Accepted share {result} with a difficulty of {parseInt(job[2])}"
                 elif feedback == "BAD":
                     echo fmt"Rejected share {result} with a difficulty of {parseInt(job[2])}"
-                sharecount += 1
                 break # Breaking from the loop, as the job was solved
 
 var config: JsonNode
