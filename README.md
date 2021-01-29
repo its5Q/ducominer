@@ -7,6 +7,7 @@ You can install the miner using 2 methods:
 - Downloading a precompiled version on the [Releases](https://github.com/its5Q/ducominer/releases "Releases") page [Recommended]
 - Installing it using Nimble package manager
 ```nimble install ducominer```
+
 If you are on Linux, you need to install 2 dependencies for the hashing library: ```libgcrypt20``` and ```libgcrypt20-dev```
 
 ### Usage
