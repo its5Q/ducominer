@@ -2,3 +2,5 @@ nimcache/
 nimblecache/
 htmldocs/
 compile*
+ducominer.exe
+ducominer
