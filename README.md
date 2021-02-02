@@ -1,5 +1,5 @@
 # ducominer
- A multithreaded miner for [DuinoCoin](https://github.com/revoxhere/duino-coin "DuinoCoin") written in Nim. It is pretty fast compared to other DUCO miners, and on my system with Ryzen 7 2700 @ 3.8 GHz the profit is around 300 DUCO/24h.
+ A multithreaded miner for [DuinoCoin](https://github.com/revoxhere/duino-coin "DuinoCoin") written in Nim.
  
 ### Installation
 You can install the miner using 2 methods:
